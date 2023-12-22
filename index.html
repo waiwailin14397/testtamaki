@@ -12,59 +12,44 @@
             <script>
                 window.onload = function () {
                     // Initialize LIFF
-                    // liff.init({
-                    //     liffId: '2002392025-Zk8LPK6K'
-                    // })
-                    // .then(() => {
-                    //     // LIFF initialization successful
-                    //     var outputElement = document.getElementById('output');
-                    //     outputElement.innerHTML = "LIFF initialized";
-
-                    //     liff.getProfile()
-                    //         .then((profile) => {
-                    //             console.log('User Profile:', profile);
-                    //             // Access specific profile information
-                    //             const userId = profile.userId;
-                    //             const displayName = profile.displayName;
-                    //             const pictureUrl = profile.pictureUrl;
-
-                    //             // Now you can use the user information as needed
-                    //             var id = document.getElementById('id');
-                    //             var name = document.getElementById('name');
-                    //             var pictureurl = document.getElementById('pictureurl');
-
-                    //             id.innerHTML = userId;
-                    //             name.innerHTML = displayName;
-                    //             pictureurl.innerHTML = pictureUrl;
-
-                    //             console.log('User ID:', userId);
-                    //             console.log('Display Name:', displayName);
-                    //             console.log('Profile Picture URL:', pictureUrl);
-                    //         })
-                    //         .catch((error) => {
-                    //             console.error('Error getting user profile', error);
-                    //         });
-
-                    //     // Now you can use other LIFF API functions
-                    // })
-                    // .catch((error) => {
-                    //     // Handle initialization failure
-                    //     console.error('LIFF initialization failed', error);
-                    // });
                     liff.init({
                         liffId: '2002392025-Zk8LPK6K'
                     })
                     .then(() => {
-                        // LIFF initialized successfully
-                        return liff.getProfile();
-                    })
-                    .then((profile) => {
-                        // Handle user profile
-                        console.log('User Profile:', profile);
+                        // LIFF initialization successful
+                        var outputElement = document.getElementById('output');
+                        outputElement.innerHTML = "LIFF initialized";
+
+                        liff.getProfile()
+                            .then((profile) => {
+                                console.log('User Profile:', profile);
+                                // Access specific profile information
+                                const userId = profile.userId;
+                                const displayName = profile.displayName;
+                                const pictureUrl = profile.pictureUrl;
+
+                                // Now you can use the user information as needed
+                                var id = document.getElementById('id');
+                                var name = document.getElementById('name');
+                                var pictureurl = document.getElementById('pictureurl');
+
+                                id.innerHTML = userId;
+                                name.innerHTML = displayName;
+                                pictureurl.innerHTML = pictureUrl;
+
+                                console.log('User ID:', userId);
+                                console.log('Display Name:', displayName);
+                                console.log('Profile Picture URL:', pictureUrl);
+                            })
+                            .catch((error) => {
+                                console.error('Error getting user profile', error);
+                            });
+
+                        // Now you can use other LIFF API functions
                     })
                     .catch((error) => {
-                        // Handle errors
-                        console.error('LIFF initialization or getProfile failed', error);
+                        // Handle initialization failure
+                        console.error('LIFF initialization failed', error);
                     });
                 };
             </script>
