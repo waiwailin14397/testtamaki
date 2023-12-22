@@ -2,18 +2,32 @@
     <title>Tamaki</title>
     <body>
         <div>
-            <h1>Title 1</h1>
-            <h2>Title 2</h2>
-            <h2>Title 3</h2>
             <div id="output"></div>
 
             <!-- JavaScript code to display "Hello, World!" -->
             <script>
                 // Get the element with the id 'output'
-                var outputElement = document.getElementById('output');
+                // var outputElement = document.getElementById('output');
 
-                // Set the innerHTML of the 'output' div to "Hello, World!"
-                outputElement.innerHTML = "Hello, World!";
+                // // Set the innerHTML of the 'output' div to "Hello, World!"
+                // outputElement.innerHTML = "Hello, World!";
+                window.onload = function () {
+                    // Initialize LIFF
+                    liff.init({
+                        liffId: '2002392025-Zk8LPK6K' // Replace with your LIFF app ID
+                    })
+                    .then(() => {
+                        // LIFF initialization successful
+                        console.log('LIFF initialized');
+                        var outputElement = document.getElementById('output');
+                        outputElement.innerHTML = "LIFF initialized";
+                        // Now you can use other LIFF API functions
+                    })
+                    .catch((error) => {
+                        // Handle initialization failure
+                        console.error('LIFF initialization failed', error);
+                    });
+                };
             </script>
         </div>
     </body>
