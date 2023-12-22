@@ -6,24 +6,36 @@
             <h1>Title2</h1>
             <div id="output"></div>
 
-            <!-- JavaScript code to display "Hello, World!" -->
             <script>
-                // Get the element with the id 'output'
-                // var outputElement = document.getElementById('output');
-
-                // // Set the innerHTML of the 'output' div to "Hello, World!"
-                // outputElement.innerHTML = "Hello, World!";
                 window.onload = function () {
                     // Initialize LIFF
                     liff.init({
-                        // liffId: '2002392025-Zk8LPK6K'
-                        liffId: '22' // Replace with your LIFF app ID
+                        liffId: '2002392025-Zk8LPK6K'
+                        //liffId: '22' // Replace with your LIFF app ID
                     })
                     .then(() => {
                         // LIFF initialization successful
                         console.log('LIFF initialized');
                         var outputElement = document.getElementById('output');
                         outputElement.innerHTML = "LIFF initialized";
+
+                        liff.getProfile()
+                            .then((profile) => {
+                                console.log('User Profile:', profile);
+                                // Access specific profile information
+                                const userId = profile.userId;
+                                const displayName = profile.displayName;
+                                const pictureUrl = profile.pictureUrl;
+
+                                // Now you can use the user information as needed
+                                console.log('User ID:', userId);
+                                console.log('Display Name:', displayName);
+                                console.log('Profile Picture URL:', pictureUrl);
+                            })
+                            .catch((error) => {
+                                console.error('Error getting user profile', error);
+                            });
+
                         // Now you can use other LIFF API functions
                     })
                     .catch((error) => {
