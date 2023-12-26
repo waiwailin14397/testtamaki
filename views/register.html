@@ -64,7 +64,6 @@
                     <!-- Modal body -->
                     <div class="modal-body">
                       Modal body..Test
-                      <div id="register"></div>
                     </div>
               
                     <!-- Modal footer -->
@@ -82,21 +81,6 @@
         function navigateTo(page) {
             window.location.href = page;
         }
-        window.onload = function () {
-            // Initialize LIFF
-            liff.init({
-                liffId: '2002392025-Zk8LPK6K'
-            })
-            .then(() => {
-                // LIFF initialization successful
-                var outputElement = document.getElementById('register');
-                outputElement.innerHTML = "LIFF initialized successful";
-            })
-            .catch((error) => {
-                // Handle initialization failure
-                console.error('LIFF initialization failed', error);
-            });
-        };
     </script>
 </body>
 </html>
