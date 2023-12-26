@@ -1,0 +1,29 @@
+<html>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <title>Tamaki</title>
+    <body>
+        <div>
+            <h1>Menu</h1>
+            <div id="output"></div>
+
+            <script>
+                window.onload = function () {
+                    // Initialize LIFF
+                    liff.init({
+                        liffId: '2002392025-Zk8LPK6K'
+                    })
+                    .then(() => {
+                        // LIFF initialization successful
+                        var outputElement = document.getElementById('output');
+                        outputElement.innerHTML = "LIFF initialized";
+
+                    })
+                    .catch((error) => {
+                        // Handle initialization failure
+                        console.error('LIFF initialization failed', error);
+                    });
+                };
+            </script>
+        </div>
+    </body>
+</html>
