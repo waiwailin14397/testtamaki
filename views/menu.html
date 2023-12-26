@@ -1,12 +1,25 @@
 <html>
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-    <title>tamaki</title>
     <body>
         <div>
             <h1>Menu</h1>
             <div id="output"></div>
 
             <script>
+                // Ensure that the LIFF library is initialized
+                liff.init({
+                    liffId: '2002392025-Zk8LPK6K' // Replace with your LINE Channel ID
+                }).then(() => {
+                    // LIFF initialization succeeded
+                    var outputElement = document.getElementById('output');
+                    outputElement.innerHTML = "LIFF initialization successfully";
+                }).catch((err) => {
+                    // LIFF initialization failed
+                    console.error('LIFF initialization failed', err);
+                });
+            </script>
+
+            <!-- <script>
                 window.onload = function () {
                     // Initialize LIFF
                     liff.init({
@@ -23,7 +36,7 @@
                         console.error('LIFF initialization failed', error);
                     });
                 };
-            </script>
+            </script> -->
         </div>
     </body>
 </html>
