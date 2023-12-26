@@ -2,26 +2,13 @@
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <body>
         <div>
-            <h1>Menu Test Second</h1>
-            <div id="output"></div>
+            <h1>Menu Test</h1>
+            <div id="hello"></div>
 
             <script>
                 // Ensure that the LIFF library is initialized
-                window.onload = function () {
-                    // Initialize LIFF
-                    liff.init({
-                        liffId: '2002392025-Zk8LPK6K'
-                    })
-                    .then(() => {
-                        // LIFF initialization successful
-                        var outputElement = document.getElementById('output');
-                        outputElement.innerHTML = "LIFF initialized successfully";
-                    })
-                    .catch((error) => {
-                        // Handle initialization failure
-                        console.error('LIFF initialization failed', error);
-                    });
-                };
+                var testElement = document.getElementById('hello');
+                testElement.innerHTML = "Hello World";
             </script>
 
             <!-- <script>
