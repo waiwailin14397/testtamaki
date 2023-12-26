@@ -2,21 +2,26 @@
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <body>
         <div>
-            <h1>Menu Test</h1>
+            <h1>Menu Test Second</h1>
             <div id="output"></div>
 
             <script>
                 // Ensure that the LIFF library is initialized
-                liff.init({
-                    liffId: '2002392025-Zk8LPK6K' // Replace with your LINE Channel ID
-                }).then(() => {
-                    // LIFF initialization succeeded
-                    var outputElement = document.getElementById('output');
-                    outputElement.innerHTML = "LIFF initialization successfully";
-                }).catch((err) => {
-                    // LIFF initialization failed
-                    console.error('LIFF initialization failed', err);
-                });
+                window.onload = function () {
+                    // Initialize LIFF
+                    liff.init({
+                        liffId: '2002392025-Zk8LPK6K'
+                    })
+                    .then(() => {
+                        // LIFF initialization successful
+                        var outputElement = document.getElementById('output');
+                        outputElement.innerHTML = "LIFF initialized successfully";
+                    })
+                    .catch((error) => {
+                        // Handle initialization failure
+                        console.error('LIFF initialization failed', error);
+                    });
+                };
             </script>
 
             <!-- <script>
