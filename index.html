@@ -4,12 +4,13 @@
     <body>
         <div>
             <h1>Title4</h1>
+            <iframe src="views/menu.html" width="600" height="400" frameborder="0"></iframe>
             <!-- <div id="output"></div>
             <div id="id"></div>
             <div id="name"></div>
             <div id="pictureurl"></div> -->
 
-            <!-- <script>
+            <script>
                 window.onload = function () {
                     // Initialize LIFF
                     liff.init({
@@ -17,42 +18,42 @@
                     })
                     .then(() => {
                         // LIFF initialization successful
-                        var outputElement = document.getElementById('output');
-                        outputElement.innerHTML = "LIFF initialized";
+                    //     var outputElement = document.getElementById('output');
+                    //     outputElement.innerHTML = "LIFF initialized";
 
-                        liff.getProfile()
-                            .then((profile) => {
-                                console.log('User Profile:', profile);
-                                // Access specific profile information
-                                const userId = profile.userId;
-                                const displayName = profile.displayName;
-                                const pictureUrl = profile.pictureUrl;
+                    //     liff.getProfile()
+                    //         .then((profile) => {
+                    //             console.log('User Profile:', profile);
+                    //             // Access specific profile information
+                    //             const userId = profile.userId;
+                    //             const displayName = profile.displayName;
+                    //             const pictureUrl = profile.pictureUrl;
 
-                                // Now you can use the user information as needed
-                                var id = document.getElementById('id');
-                                var name = document.getElementById('name');
-                                var pictureurl = document.getElementById('pictureurl');
+                    //             // Now you can use the user information as needed
+                    //             var id = document.getElementById('id');
+                    //             var name = document.getElementById('name');
+                    //             var pictureurl = document.getElementById('pictureurl');
 
-                                id.innerHTML = userId;
-                                name.innerHTML = displayName;
-                                pictureurl.innerHTML = pictureUrl;
+                    //             id.innerHTML = userId;
+                    //             name.innerHTML = displayName;
+                    //             pictureurl.innerHTML = pictureUrl;
 
-                                console.log('User ID:', userId);
-                                console.log('Display Name:', displayName);
-                                console.log('Profile Picture URL:', pictureUrl);
-                            })
-                            .catch((error) => {
-                                console.error('Error getting user profile', error);
-                            });
+                    //             console.log('User ID:', userId);
+                    //             console.log('Display Name:', displayName);
+                    //             console.log('Profile Picture URL:', pictureUrl);
+                    //         })
+                    //         .catch((error) => {
+                    //             console.error('Error getting user profile', error);
+                    //         });
 
-                        // Now you can use other LIFF API functions
+                    //     // Now you can use other LIFF API functions
                     })
                     .catch((error) => {
                         // Handle initialization failure
                         console.error('LIFF initialization failed', error);
                     });
                 };
-            </script> -->
+            </script>
         </div>
     </body>
 </html>
