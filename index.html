@@ -2,12 +2,13 @@
     <head>
         <meta charset="utf-8">
         <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-        <title>Tamaki</title>
+        <title>Tamaki App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
       </head>
     <body>
+        <div id="output"></div>
         <iframe src="./views/header.html" width="100%" height="5%" frameborder="0"></iframe>
         <iframe src="./views/menu.html" width="100%" height="100%" frameborder="0"></iframe>
         <!-- <div class="container-fluid">
@@ -32,48 +33,48 @@
             //         console.error('LIFF initialization failed', error);
             //     });
             // };
-            // window.onload = function () {
-            //     // Initialize LIFF
-            //     liff.init({
-            //         liffId: '2002392025-Zk8LPK6K'
-            //     })
-            //     .then(() => {
-            //         // LIFF initialization successful
-            //         var outputElement = document.getElementById('output');
-            //         outputElement.innerHTML = "LIFF initialized";
+            window.onload = function () {
+                // Initialize LIFF
+                liff.init({
+                    liffId: '2002392025-Zk8LPK6K'
+                })
+                .then(() => {
+                    // LIFF initialization successful
+                    var outputElement = document.getElementById('output');
+                    outputElement.innerHTML = "LIFF initialized";
 
-            //         // liff.getProfile()
-            //         //     .then((profile) => {
-            //         //         console.log('User Profile:', profile);
-            //         //         // Access specific profile information
-            //         //         const userId = profile.userId;
-            //         //         const displayName = profile.displayName;
-            //         //         const pictureUrl = profile.pictureUrl;
+                    // liff.getProfile()
+                    //     .then((profile) => {
+                    //         console.log('User Profile:', profile);
+                    //         // Access specific profile information
+                    //         const userId = profile.userId;
+                    //         const displayName = profile.displayName;
+                    //         const pictureUrl = profile.pictureUrl;
 
-            //         //         // Now you can use the user information as needed
-            //         //         var id = document.getElementById('id');
-            //         //         var name = document.getElementById('name');
-            //         //         var pictureurl = document.getElementById('pictureurl');
+                    //         // Now you can use the user information as needed
+                    //         var id = document.getElementById('id');
+                    //         var name = document.getElementById('name');
+                    //         var pictureurl = document.getElementById('pictureurl');
 
-            //         //         id.innerHTML = userId;
-            //         //         name.innerHTML = displayName;
-            //         //         pictureurl.innerHTML = pictureUrl;
+                    //         id.innerHTML = userId;
+                    //         name.innerHTML = displayName;
+                    //         pictureurl.innerHTML = pictureUrl;
 
-            //         //         console.log('User ID:', userId);
-            //         //         console.log('Display Name:', displayName);
-            //         //         console.log('Profile Picture URL:', pictureUrl);
-            //         //     })
-            //         //     .catch((error) => {
-            //         //         console.error('Error getting user profile', error);
-            //         //     });
+                    //         console.log('User ID:', userId);
+                    //         console.log('Display Name:', displayName);
+                    //         console.log('Profile Picture URL:', pictureUrl);
+                    //     })
+                    //     .catch((error) => {
+                    //         console.error('Error getting user profile', error);
+                    //     });
 
-            //         // Now you can use other LIFF API functions
-            //     })
-            //     .catch((error) => {
-            //         // Handle initialization failure
-            //         console.error('LIFF initialization failed', error);
-            //     });
-            // };
+                    // Now you can use other LIFF API functions
+                })
+                .catch((error) => {
+                    // Handle initialization failure
+                    console.error('LIFF initialization failed', error);
+                });
+            };
         </script>
     </body>
 </html>
