@@ -3,29 +3,29 @@
     <title>Tamaki</title>
     <body>
         <div>
-            <h1>Title4</h1>
-            <iframe src="views/menu.html" width="600" height="400" frameborder="0"></iframe>
-            <div id="output"></div>
+            <include src="menu.html"></include>
+            <!-- <iframe src="views/menu.html" width="600" height="400" frameborder="0"></iframe> -->
+            <!-- <div id="output"></div> -->
             <!-- <div id="id"></div>
             <div id="name"></div>
             <div id="pictureurl"></div> -->
 
             <script>
-                window.onload = function () {
-                    // Initialize LIFF
-                    liff.init({
-                        liffId: '2002392025-Zk8LPK6K'
-                    })
-                    .then(() => {
-                        // LIFF initialization successful
-                        var outputElement = document.getElementById('output');
-                        outputElement.innerHTML = "LIFF initialized successfully";
-                    })
-                    .catch((error) => {
-                        // Handle initialization failure
-                        console.error('LIFF initialization failed', error);
-                    });
-                };
+                // window.onload = function () {
+                //     // Initialize LIFF
+                //     liff.init({
+                //         liffId: '2002392025-Zk8LPK6K'
+                //     })
+                //     .then(() => {
+                //         // LIFF initialization successful
+                //         // var outputElement = document.getElementById('output');
+                //         // outputElement.innerHTML = "LIFF initialized successfully";
+                //     })
+                //     .catch((error) => {
+                //         // Handle initialization failure
+                //         console.error('LIFF initialization failed', error);
+                //     });
+                // };
                 // window.onload = function () {
                 //     // Initialize LIFF
                 //     liff.init({
