@@ -27,7 +27,7 @@
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="text" class="form-label">住所</label>
-                            <input type="text" class="form-control" id="id" name="address">
+                            <input type="text" class="form-control" id="userid" name="address">
                         </div>
                     </form>
                 </div>
@@ -85,20 +85,12 @@
             window.location.href = page;
         }
         const msg = sessionStorage.getItem('data');
-        const id = sessionStorage.getItem('userid');
+        const userid = sessionStorage.getItem('userid');
         const name = sessionStorage.getItem('displayname');
-        const url = sessionStorage.getItem('picurl');
 
         document.getElementById('msg').value = msg;
-        document.getElementById('id').value = id;
+        document.getElementById('userid').value = userid;
         document.getElementById('name').value = name;
-        
-        var msgElement = document.getElementById('msg');
-        msgElement.innerHTML = msg;
-        var idElement = document.getElementById('id');
-        idElement.innerHTML = id;
-        var nameElement = document.getElementById('name');
-        nameElement.innerHTML = name;
     </script>
 </body>
 </html>
