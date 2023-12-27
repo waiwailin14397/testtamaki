@@ -23,11 +23,11 @@
                         <label class="text-success">申請者</label>
                         <div class="mb-3 mt-3 ">
                             <label for="text" class="form-label">氏名</label>
-                            <input type="text" class="form-control" id="displayname" name="name">
+                            <input type="text" class="form-control" id="testdisplayname" name="name">
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="text" class="form-label">住所</label>
-                            <input type="text" class="form-control" id="test" name="address">
+                            <input type="text" class="form-control" id="testuserid" name="address">
                         </div>
                     </form>
                 </div>
@@ -111,9 +111,8 @@
         // var nameElement = document.getElementById('displayname');
         // nameElement.innerHTML = sessionStorage.getItem('displayname');
 
-        document.getElementById('test').value = msg;
-
         if (msg) {
+            document.getElementById('testmsg').value = msg;
             document.getElementById('message').value = msg;
             var msgElement = document.getElementById('message');
             msgElement.innerHTML = sessionStorage.getItem('message');
@@ -125,6 +124,7 @@
         }
 
         if (userid) {
+            document.getElementById('testuserid').value = userid;
             document.getElementById('userid').value = userid;
             var idElement = document.getElementById('userid');
             idElement.innerHTML = sessionStorage.getItem('userid');
@@ -136,6 +136,7 @@
         }
 
         if (displayname) {
+            document.getElementById('testdisplayname').value = displayname;
             document.getElementById('displayname').value = displayname;
             var nameElement = document.getElementById('displayname');
             nameElement.innerHTML = sessionStorage.getItem('displayname');
