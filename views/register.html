@@ -24,7 +24,7 @@
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="text" class="form-label">住所</label>
-                            <input type="text" class="form-control" id="address" name="address">
+                            <input type="text" class="form-control" id="id" name="address">
                         </div>
                     </form>
                 </div>
@@ -81,6 +81,14 @@
         function navigateTo(page) {
             window.location.href = page;
         }
+        const msg = sessionStorage.getItem('data');
+        const id = sessionStorage.getItem('userid');
+        const name = sessionStorage.getItem('displayname');
+        const url = sessionStorage.getItem('picurl');
+
+        document.getElementById('msg').value = msg;
+        document.getElementById('id').value = id;
+        document.getElementById('name').value = name;
     </script>
 </body>
 </html>

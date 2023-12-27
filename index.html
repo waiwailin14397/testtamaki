@@ -18,21 +18,6 @@
         </div>
 
         <script>
-            // window.onload = function () {
-            //     // Initialize LIFF
-            //     liff.init({
-            //         liffId: '2002392025-Zk8LPK6K'
-            //     })
-            //     .then(() => {
-            //         // LIFF initialization successful
-            //         // var outputElement = document.getElementById('output');
-            //         // outputElement.innerHTML = "LIFF initialized successfully";
-            //     })
-            //     .catch((error) => {
-            //         // Handle initialization failure
-            //         console.error('LIFF initialization failed', error);
-            //     });
-            // };
             window.onload = function () {
                 // Initialize LIFF
                 liff.init({
@@ -40,9 +25,7 @@
                 })
                 .then(() => {
                     // LIFF initialization successful
-                    var msg = "successful"
-                    // var outputElement = document.getElementById('output');
-                    // outputElement.innerHTML = "LIFF initialized";
+                    var msg = "LIFF initialized successful"
 
                     liff.getProfile()
                         .then((profile) => {
@@ -51,28 +34,14 @@
                             var userId = profile.userId;
                             var displayName = profile.displayName;
                             var pictureUrl = profile.pictureUrl;
-
-                            // Now you can use the user information as needed
-                            var id = document.getElementById('id');
-                            var name = document.getElementById('name');
-                            var pictureurl = document.getElementById('pictureurl');
-
-                            id.innerHTML = userId;
-                            name.innerHTML = displayName;
-                            pictureurl.innerHTML = pictureUrl;
-
-                            // console.log('User ID:', userId);
-                            // console.log('Display Name:', displayName);
-                            // console.log('Profile Picture URL:', pictureUrl);
                         })
                         .catch((error) => {
                             console.error('Error getting user profile', error);
                         });
 
-                        localStorage.setItem('data', msg);
-                        localStorage.setItem('userid', userId);
-                        localStorage.setItem('displayname', displayName);
-                        localStorage.setItem('picurl', pictureUrl);
+                        sessionStorage.setItem('data', msg);
+                        sessionStorage.setItem('userid', userId);
+                        sessionStorage.setItem('displayname', displayName);
 
                     // Now you can use other LIFF API functions
                 })
