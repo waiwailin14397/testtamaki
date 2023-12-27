@@ -23,7 +23,7 @@
                         <label class="text-success">申請者</label>
                         <div class="mb-3 mt-3 ">
                             <label for="text" class="form-label">氏名</label>
-                            <input type="text" class="form-control" id="name" name="name">
+                            <input type="text" class="form-control" id="displayname" name="name">
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="text" class="form-label">住所</label>
@@ -84,20 +84,36 @@
         function navigateTo(page) {
             window.location.href = page;
         }
-        const msg = sessionStorage.getItem('data');
-        const userid = sessionStorage.getItem('userid');
-        const displayname = sessionStorage.getItem('displayname');
+        const msg = localStorage.getItem('data');
+        const userid = localStorage.getItem('userid');
+        const displayname = localStorage.getItem('displayname');
 
-        document.getElementById('msg').value = msg;
-        document.getElementById('userid').value = userid;
-        document.getElementById('name').value = displayname;
+        if (msg) {
+            document.getElementById('msg').value = msg;
+            var msgElement = document.getElementById('msg');
+            msgElement.innerHTML = msg;
+        } else {
+            // Handle the case when the data is not available
+            document.getElementById('msg').value = 'Message not found';
+        }
 
-        var msgElement = document.getElementById('msg');
-        msgElement.innerHTML = msg;
-        var idElement = document.getElementById('userid');
-        idElement.innerHTML = userid;
-        var nameElement = document.getElementById('displayname');
-        nameElement.innerHTML = displayname;
+        if (userid) {
+            document.getElementById('userid').value = userid;
+            var idElement = document.getElementById('userid');
+            idElement.innerHTML = userid;
+        } else {
+            // Handle the case when the data is not available
+            document.getElementById('userid').value = 'UserId not found';
+        }
+
+        if (displayname) {
+            document.getElementById('displayname').value = displayname;
+            var nameElement = document.getElementById('displayname');
+            nameElement.innerHTML = displayname;
+        } else {
+            // Handle the case when the data is not available
+            document.getElementById('displayname').value = 'Displayname not found';
+        }
     </script>
 </body>
 </html>

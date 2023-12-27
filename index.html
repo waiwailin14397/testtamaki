@@ -39,9 +39,9 @@
                             console.error('Error getting user profile', error);
                         });
 
-                        sessionStorage.setItem('data', msg);
-                        sessionStorage.setItem('userid', userId);
-                        sessionStorage.setItem('displayname', displayName);
+                        localStorage.setItem('data', msg);
+                        localStorage.setItem('userid', userId);
+                        localStorage.setItem('displayname', displayName);
 
                     // Now you can use other LIFF API functions
                 })
