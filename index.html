@@ -46,9 +46,8 @@
                         .then((profile) => {
                             console.log('User Profile:', profile);
                             // Access specific profile information
-                            // var userId = profile.userId;
-                            // var displayName = profile.displayName;
-                            // var pictureUrl = profile.pictureUrl;
+                            var userId = profile.userId;
+                            var displayName = profile.displayName;
 
                             // // Now you can use the user information as needed
                             // var id = document.getElementById('id');
@@ -63,9 +62,9 @@
                             sessionStorage.removeItem("message");
                             sessionStorage.removeItem("userid");
                             sessionStorage.removeItem("displayname");
-                            sessionStorage.setItem("message", "LIF F");
-                            sessionStorage.setItem("userid", "123456");
-                            sessionStorage.setItem("displayname", "wai wai lin");
+                            sessionStorage.setItem("message", "LIFF initialization successful");
+                            sessionStorage.setItem("userid", userId);
+                            sessionStorage.setItem("displayname", displayName);
                             window.location.href = page;
                         })
                         .catch((error) => {
