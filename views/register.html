@@ -27,7 +27,7 @@
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="text" class="form-label">住所</label>
-                            <input type="text" class="form-control" id="test" name="address">
+                            <input type="text" class="form-control" id="userid" name="address">
                         </div>
                     </form>
                 </div>
@@ -99,65 +99,52 @@
         var userid = sessionStorage.getItem('userid');
         var displayname = sessionStorage.getItem('displayname');
 
-        document.getElementById('message').value = msg;
-        var msgElement = document.getElementById('message');
-        msgElement.innerHTML = sessionStorage.getItem('message');
-
-        document.getElementById('userid').value = userid;
-        var idElement = document.getElementById('userid');
-        idElement.innerHTML = sessionStorage.getItem('userid');
-
-        document.getElementById('displayname').value = displayname;
-        var nameElement = document.getElementById('displayname');
-        nameElement.innerHTML = sessionStorage.getItem('displayname');
-
-        document.getElementById('test').value = "Testing";
-
-        // var msg = sessionStorage.getItem('message');
-        // var userid = sessionStorage.getItem('name');
-        // console.log('msg ', msg);
-        // console.log('name  ', userid);
-
-        // document.getElementById('msg').value = msg;
-        // var msgElement = document.getElementById('msg');
+        // document.getElementById('message').value = msg;
+        // var msgElement = document.getElementById('message');
         // msgElement.innerHTML = sessionStorage.getItem('message');
 
         // document.getElementById('userid').value = userid;
         // var idElement = document.getElementById('userid');
         // idElement.innerHTML = sessionStorage.getItem('userid');
 
-        // if (msg) {
-        //     document.getElementById('msg').value = msg;
-        //     var msgElement = document.getElementById('msg');
-        //     msgElement.innerHTML = msg;
-        // } else {
-        //     // Handle the case when the data is not available
-        //     document.getElementById('msg').value = 'Message not found';
-        //     var msgElement = document.getElementById('msg');
-        //     msgElement.innerHTML = 'Message not found';
-        // }
+        // document.getElementById('displayname').value = displayname;
+        // var nameElement = document.getElementById('displayname');
+        // nameElement.innerHTML = sessionStorage.getItem('displayname');
 
-        // if (userid) {
-        //     document.getElementById('userid').value = userid;
-        //     var idElement = document.getElementById('userid');
-        //     idElement.innerHTML = userid;
-        // } else {
-        //     // Handle the case when the data is not available
-        //     document.getElementById('userid').value = 'UserId not found';
-        //     var idElement = document.getElementById('userid');
-        //     idElement.innerHTML = 'UserId not found';
-        // }
+        // document.getElementById('test').value = "Testing";
 
-        // if (displayname) {
-        //     document.getElementById('displayname').value = displayname;
-        //     var nameElement = document.getElementById('displayname');
-        //     nameElement.innerHTML = displayname;
-        // } else {
-        //     // Handle the case when the data is not available
-        //     document.getElementById('displayname').value = 'Displayname not found';
-        //     var nameElement = document.getElementById('displayname');
-        //     nameElement.innerHTML = "Displayname not found";
-        // }
+        if (msg) {
+            document.getElementById('message').value = msg;
+            var msgElement = document.getElementById('message');
+            msgElement.innerHTML = sessionStorage.getItem('message');
+        } else {
+            // Handle the case when the data is not available
+            document.getElementById('message').value = "null";
+            var msgElement = document.getElementById('message');
+            msgElement.innerHTML = "null";
+        }
+
+        if (userid) {
+            document.getElementById('userid').value = userid;
+            var idElement = document.getElementById('userid');
+            idElement.innerHTML = sessionStorage.getItem('userid');
+        } else {
+            // Handle the case when the data is not available
+            document.getElementById('userid').value = "null";
+            var idElement = document.getElementById('userid');
+            idElement.innerHTML = "null";
+        }
+
+        if (displayname) {
+            document.getElementById('displayname').value = displayname;
+            var nameElement = document.getElementById('displayname');
+            nameElement.innerHTML = sessionStorage.getItem('displayname');
+        } else {
+            // Handle the case when the data is not available
+            document.getElementById('displayname').value = "null";
+            var nameElement = document.getElementById('displayname');
+            nameElement.innerHTML = "null";
+        }
     </script>
 </body>
 </html>
