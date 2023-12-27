@@ -95,7 +95,7 @@
         function navigateTo(page) {
             window.location.href = page;
         }
-        // var msg = sessionStorage.getItem('message');
+        var msg = sessionStorage.getItem('message');
         var userid = sessionStorage.getItem('userid');
         var displayname = sessionStorage.getItem('displayname');
 
@@ -103,16 +103,16 @@
         document.getElementById('test2').value = userid;
         document.getElementById('test3').value = displayname;
 
-        // if (msg) {
-        //     document.getElementById('message').value = msg;
-        //     var msgElement = document.getElementById('message');
-        //     msgElement.innerHTML = sessionStorage.getItem('message');
-        // } else {
-        //     // Handle the case when the data is not available
-        //     document.getElementById('message').value = "null";
-        //     var msgElement = document.getElementById('message');
-        //     msgElement.innerHTML = "null";
-        // }
+        if (msg) {
+            document.getElementById('message').value = msg;
+            var msgElement = document.getElementById('message');
+            msgElement.innerHTML = sessionStorage.getItem('message');
+        } else {
+            // Handle the case when the data is not available
+            document.getElementById('message').value = "null";
+            var msgElement = document.getElementById('message');
+            msgElement.innerHTML = "null";
+        }
 
         if (userid) {
             document.getElementById('userid').value = userid;
