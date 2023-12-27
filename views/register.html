@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="msg"></div>
-    <div id="id"></div>
+    <div id="userid"></div>
     <div id="name"></div>
     <div class="container-fluid">
         <form>
@@ -91,6 +91,13 @@
         document.getElementById('msg').value = msg;
         document.getElementById('userid').value = userid;
         document.getElementById('name').value = name;
+
+        var msgElement = document.getElementById('msg');
+        msgElement.innerHTML = msg;
+        var idElement = document.getElementById('userid');
+        idElement.innerHTML = userid;
+        var nameElement = document.getElementById('name');
+        nameElement.innerHTML = name;
     </script>
 </body>
 </html>
