@@ -39,9 +39,9 @@
         }
 
         window.onload = function () {
-            const message = sessionStorage.getItem('message');
-            const userId = sessionStorage.getItem('userid');
-            const disName = sessionStorage.getItem('disname');
+            const message = localStorage.getItem('message');
+            const userId = localStorage.getItem('userid');
+            const disName = localStorage.getItem('disname');
             
             var msgElement = document.getElementById('message');
             msgElement.innerHTML = message;
