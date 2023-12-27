@@ -11,6 +11,7 @@
     <div id="msg"></div>
     <div id="userid"></div>
     <div id="displayname"></div>
+    <div id="test"></div>
     <div class="container-fluid">
         <form>
             <div class="card">
@@ -84,9 +85,21 @@
         function navigateTo(page) {
             window.location.href = page;
         }
-        var msg = sessionStorage.getItem('message');
-        var userid = sessionStorage.getItem('userid');
-        var displayname = sessionStorage.getItem('disname');
+        const msg = sessionStorage.getItem('message');
+        const userid = sessionStorage.getItem('userid');
+        const displayname = sessionStorage.getItem('disname');
+        const test = sessionStorage.getItem('test');
+
+        if (test) {
+            document.getElementById('test').value = test;
+            var testElement = document.getElementById('test');
+            testElement.innerHTML = test;
+        } else {
+            // Handle the case when the data is not available
+            document.getElementById('test').value = 'test not found';
+            var testElement = document.getElementById('test');
+            testElement.innerHTML = 'test not found';
+        }
 
         if (msg) {
             document.getElementById('msg').value = msg;
@@ -94,9 +107,9 @@
             msgElement.innerHTML = msg;
         } else {
             // Handle the case when the data is not available
-            document.getElementById('msg').value = 'Message not';
+            document.getElementById('msg').value = 'Message not found';
             var msgElement = document.getElementById('msg');
-            msgElement.innerHTML = 'Message not';
+            msgElement.innerHTML = 'Message not found';
         }
 
         if (userid) {
