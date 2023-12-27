@@ -8,6 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
       </head>
     <body>
+        <div id="outputname"></div>
         <!-- <div id="output"></div>
         <div id="id"></div>
         <div id="name"></div> -->
@@ -64,9 +65,12 @@
                             var name = document.getElementById('name');
 
                             sessionStorage.setItem("message", "LIFF initialization successful");
-                            sessionStorage.setItem("userid", id);
-                            sessionStorage.setItem("disname", name);
+                            sessionStorage.setItem("userid", userId);
+                            sessionStorage.setItem("disname", displayName);
                             sessionStorage.setItem("test", "test");
+
+                            var outputnameElement = document.getElementById('outputname');
+                            outputnameElement.innerHTML = sessionStorage.getItem('disname');
 
                             id.innerHTML = userId;
                             name.innerHTML = displayName;
