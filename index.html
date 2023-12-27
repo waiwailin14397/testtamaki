@@ -10,9 +10,9 @@
     <body>
         <iframe src="./views/header.html" width="100%" height="5%" frameborder="0"></iframe>
         <iframe src="./views/menu.html" width="100%" height="100%" frameborder="0"></iframe>
-        <div id="output"></div>
+        <!-- <div id="output"></div>
         <div id="id"></div>
-        <div id="name"></div>
+        <div id="name"></div> -->
 
         <script>
             window.onload = function () {
@@ -36,15 +36,13 @@
                             // Now you can use the user information as needed
                             var id = document.getElementById('id');
                             var name = document.getElementById('name');
-                            var pictureurl = document.getElementById('pictureurl');
+
+                            sessionStorage.setItem("message", "LIFF Successful");
+                            sessionStorage.setItem("userid", userId);
+                            sessionStorage.setItem("disname", displayName);
 
                             id.innerHTML = userId;
                             name.innerHTML = displayName;
-                            pictureurl.innerHTML = pictureUrl;
-
-                            console.log('User ID:', userId);
-                            console.log('Display Name:', displayName);
-                            console.log('Profile Picture URL:', pictureUrl);
                         })
                         .catch((error) => {
                             console.error('Error getting user profile', error);
