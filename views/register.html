@@ -87,7 +87,7 @@
               
                   </div>
                 </div>
-              </div>
+            </div>
         </form>
     </div>
 
@@ -95,9 +95,9 @@
         function navigateTo(page) {
             window.location.href = page;
         }
-        const msg = sessionStorage.getItem('message');
-        const userid = sessionStorage.getItem('userid');
-        const displayname = sessionStorage.getItem('disname');
+        var msg = sessionStorage.getItem('message');
+        var userid = sessionStorage.getItem('userid');
+        var displayname = sessionStorage.getItem('disname');
 
         document.getElementById('msg').value = msg;
         var msgElement = document.getElementById('msg');
