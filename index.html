@@ -39,33 +39,38 @@
                     liffId: '2002392025-Zk8LPK6K'
                 })
                 .then(() => {
+                    // LIFF initialization successful
+                    // var outputElement = document.getElementById('output');
+                    // outputElement.innerHTML = "LIFF initialized";
                     liff.getProfile()
                         .then((profile) => {
                             console.log('User Profile:', profile);
                             // Access specific profile information
-                            var userId = profile.userId;
-                            var displayName = profile.displayName;
+                            // var userId = profile.userId;
+                            // var displayName = profile.displayName;
+                            // var pictureUrl = profile.pictureUrl;
 
-                            // Now you can use the user information as needed
+                            // // Now you can use the user information as needed
                             // var id = document.getElementById('id');
                             // var name = document.getElementById('name');
 
-                            sessionStorage.clear();
+                            // // sessionStorage.clear();
 
-                            sessionStorage.setItem("message", "LIFF initialization successful");
-                            sessionStorage.setItem("userid", userId);
-                            sessionStorage.setItem("disname", displayName);
+                            // sessionStorage.setItem("message", "LIFF initialization successful");
+                            // sessionStorage.setItem("userid", userId);
+                            // sessionStorage.setItem("disname", displayName);
 
-                            // var outputnameElement = document.getElementById('outputname');
-                            // outputnameElement.innerHTML = sessionStorage.getItem('disname');
-
-                            // id.innerHTML = userId;
-                            // name.innerHTML = displayName;
+                            sessionStorage.removeItem("message");
+                            sessionStorage.removeItem("userid");
+                            sessionStorage.removeItem("displayname");
+                            sessionStorage.setItem("message", "LIF F");
+                            sessionStorage.setItem("userid", "123456");
+                            sessionStorage.setItem("displayname", "wai wai lin");
+                            window.location.href = page;
                         })
                         .catch((error) => {
                             console.error('Error getting user profile', error);
                         });
-                    window.location.href = page;
                 })
                 .catch((error) => {
                     // Handle initialization failure

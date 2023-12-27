@@ -8,7 +8,7 @@
     </head>
     <iframe src="header.html" width="100%" height="5%" frameborder="0"></iframe>
 <body>
-    <div id="msg"></div>
+    <div id="message"></div>
     <div id="userid"></div>
     <div id="displayname"></div>
     <div class="container-fluid">
@@ -97,10 +97,10 @@
         }
         var msg = sessionStorage.getItem('message');
         var userid = sessionStorage.getItem('userid');
-        var displayname = sessionStorage.getItem('disname');
+        var displayname = sessionStorage.getItem('displayname');
 
-        document.getElementById('msg').value = msg;
-        var msgElement = document.getElementById('msg');
+        document.getElementById('message').value = msg;
+        var msgElement = document.getElementById('message');
         msgElement.innerHTML = sessionStorage.getItem('message');
 
         document.getElementById('userid').value = userid;
@@ -109,8 +109,20 @@
 
         document.getElementById('displayname').value = displayname;
         var nameElement = document.getElementById('displayname');
-        nameElement.innerHTML = sessionStorage.getItem('disname');
+        nameElement.innerHTML = sessionStorage.getItem('displayname');
 
+        // var msg = sessionStorage.getItem('message');
+        // var userid = sessionStorage.getItem('name');
+        // console.log('msg ', msg);
+        // console.log('name  ', userid);
+
+        // document.getElementById('msg').value = msg;
+        // var msgElement = document.getElementById('msg');
+        // msgElement.innerHTML = sessionStorage.getItem('message');
+
+        // document.getElementById('userid').value = userid;
+        // var idElement = document.getElementById('userid');
+        // idElement.innerHTML = sessionStorage.getItem('userid');
 
         // if (msg) {
         //     document.getElementById('msg').value = msg;
